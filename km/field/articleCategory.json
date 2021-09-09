@@ -1,0 +1,13 @@
+{
+  "$id": "c_articleCategory",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Article Category",
+  "group": "NONE",
+  "localization": "OVERRIDABLE",
+  "type": {
+    "stringType": {
+      "stereotype": "SIMPLE"
+    }
+  },
+  "typeId": "yext/string"
+}

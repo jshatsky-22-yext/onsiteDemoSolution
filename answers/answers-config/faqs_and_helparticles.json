@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.yext.com/config/answers/answers-config/v1",
+  "$id": "faqs_and_helparticles",
+  "name": "Support Answers",
+  "supportedLocales": [],
+  "countryRestrictions": [],
+  "verticals": {
+    "faqs": {
+      "entityTypes": [
+        "faq"
+      ],
+      "name": "FAQs",
+      "searchableFields": {
+        "builtin.entityType": {
+          "nlpFilter": true
+        },
+        "keywords": {
+          "textSearch": true
+        },
+        "question": {
+          "semanticTextSearch": true
+        }
+      },
+      "sortBys": [],
+      "source": "KNOWLEDGE_MANAGER"
+    },
+    "help_articles": {
+      "entityTypes": [
+        "helpArticle"
+      ],
+      "name": "Help Articles",
+      "searchableFields": {
+        "body": {
+          "documentSearch": true
+        },
+        "builtin.entityType": {
+          "nlpFilter": true
+        },
+        "name": {
+          "phraseMatch": true,
+          "textSearch": true
+        }
+      },
+      "sortBys": [],
+      "source": "KNOWLEDGE_MANAGER"
+    }
+  },
+  "localizations": {},
+  "additionalSearchablePlaces": [],
+  "querySuggestions": {
+    "disablePopularQueries": false,
+    "verticalPromptsOnEmpty": false,
+    "popularQueriesBlacklistedTerms": [],
+    "universalPrompts": [],
+    "verticalPrompts": {
+      "faqs": [
+        "[[name]]"
+      ],
+      "help_articles": [
+        "[[name]]"
+      ]
+    }
+  }
+}

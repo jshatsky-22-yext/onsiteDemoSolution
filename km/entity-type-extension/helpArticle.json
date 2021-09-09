@@ -1,0 +1,20 @@
+{
+  "$id": "helpArticle",
+  "$schema": "https://schema.yext.com/config/km/entity-type-extension/v1",
+  "enabled": true,
+  "entityType": "yext/helpArticle",
+  "field": [
+    {
+      "id": "c_articleCategory",
+      "required": false
+    },
+    {
+      "id": "c_author",
+      "required": false
+    },
+    {
+      "id": "c_image1",
+      "required": false
+    }
+  ]
+}

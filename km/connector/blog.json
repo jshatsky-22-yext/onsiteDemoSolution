@@ -1,0 +1,107 @@
+{
+  "$id": "blog",
+  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "displayName": "Blog",
+  "entityType": "helpArticle",
+  "source": {
+    "sourceConfig": {
+      "crawlerConfig": {
+        "crawler": "blogCrawler",
+        "urlPatterns": []
+      }
+    },
+    "baseSelector": {
+      "type": "CSS",
+      "header": "Item Container",
+      "path": "article.post-card",
+      "mode": "ALL_TEXT"
+    },
+    "selectors": [
+      {
+        "type": "ITEM_ID",
+        "header": "Item ID"
+      },
+      {
+        "type": "CSS",
+        "header": "Article Category",
+        "path": "span.post-card--preheading",
+        "mode": "ALL_TEXT"
+      },
+      {
+        "type": "CSS",
+        "header": "Article Title",
+        "path": "h3",
+        "mode": "ALL_TEXT"
+      },
+      {
+        "type": "CSS",
+        "header": "Short Description",
+        "path": "p.post-card--description",
+        "mode": "ALL_TEXT"
+      },
+      {
+        "type": "CSS",
+        "header": "Image",
+        "path": "img",
+        "mode": "IMAGE_URL"
+      },
+      {
+        "type": "CSS",
+        "header": "Landing Page URL",
+        "path": "h3 a",
+        "mode": "URL"
+      },
+      {
+        "type": "CSS",
+        "header": "Author",
+        "path": "span.post-card--author",
+        "mode": "ALL_TEXT"
+      }
+    ]
+  },
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Item ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "Landing Page URL",
+      "subfieldPath": []
+    },
+    {
+      "field": "c_articleCategory",
+      "header": "Article Category",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Article Title",
+      "subfieldPath": []
+    },
+    {
+      "field": "shortDescription",
+      "header": "Short Description",
+      "subfieldPath": []
+    },
+    {
+      "field": "c_author",
+      "header": "Author",
+      "subfieldPath": []
+    },
+    {
+      "field": "c_image1",
+      "header": "Image",
+      "subfieldPath": [
+        {
+          "name": "url"
+        }
+      ]
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "DEFAULT"
+  }
+}

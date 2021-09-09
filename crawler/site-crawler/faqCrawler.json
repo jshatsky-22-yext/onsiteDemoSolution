@@ -1,0 +1,12 @@
+{
+  "$id": "faqCrawler",
+  "$schema": "https://schema.yext.com/config/crawler/site-crawler/v1",
+  "name": "Crawl FAQs",
+  "enabled": true,
+  "crawlSchedule": "weekly",
+  "crawlStrategy": "subPages",
+  "domains": [
+    "${{url_to_faqs}}"
+  ],
+  "ignoreQueryParameterOption": "none"
+}

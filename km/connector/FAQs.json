@@ -1,0 +1,59 @@
+{
+  "$id": "FAQs",
+  "$schema": "https://schema.yext.com/config/km/connector/v1",
+  "displayName": "FAQs",
+  "entityType": "faq",
+  "source": {
+    "sourceConfig": {
+      "crawlerConfig": {
+        "crawler": "faqCrawler",
+        "urlPatterns": []
+      }
+    },
+    "baseSelector": {
+      "type": "CSS",
+      "header": "Item Container",
+      "path": "div.details",
+      "mode": "ALL_TEXT"
+    },
+    "selectors": [
+      {
+        "type": "ITEM_ID",
+        "header": "Item ID"
+      },
+      {
+        "type": "CSS",
+        "header": "Question",
+        "path": "span",
+        "mode": "ALL_TEXT"
+      },
+      {
+        "type": "CSS",
+        "header": "Answer",
+        "path": "div.content",
+        "mode": "ALL_TEXT"
+      }
+    ]
+  },
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Item ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "question",
+      "header": "Question",
+      "subfieldPath": []
+    },
+    {
+      "field": "answer",
+      "header": "Answer",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "useSourceSchedule": true,
+    "runMode": "DEFAULT"
+  }
+}

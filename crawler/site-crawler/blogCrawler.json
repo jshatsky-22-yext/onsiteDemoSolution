@@ -1,0 +1,12 @@
+{
+  "$id": "blogCrawler",
+  "$schema": "https://schema.yext.com/config/crawler/site-crawler/v1",
+  "name": "Blog Crawler",
+  "enabled": true,
+  "crawlSchedule": "weekly",
+  "crawlStrategy": "subPages",
+  "domains": [
+    "${{url_to_blog}}"
+  ],
+  "ignoreQueryParameterOption": "none"
+}
